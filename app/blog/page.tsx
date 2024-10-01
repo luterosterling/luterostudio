@@ -1,4 +1,6 @@
-import { BlogPosts } from "@/app/components/BlogPosts";
+import { BlogItems } from "@/app/components/BlogItems";
+import Header from "@/app/components/Header";
+import { Box } from "@mui/material";
 
 export const metadata = {
   title: "Blog",
@@ -7,9 +9,11 @@ export const metadata = {
 
 export default function Page() {
   return (
-    <section>
-      <h1>My Blog</h1>
-      <BlogPosts />
-    </section>
+    <>
+      <Header />
+      <Box component="main">  
+        <BlogItems />
+      </Box>
+    </>
   );
 }
